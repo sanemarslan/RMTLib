@@ -22,4 +22,4 @@ Example:
 	   ./jacobi-1d-orig orig.out
 
 	2. For running the RMT-enabled code:
-	   ./jacobi-1d-rmt > rmt.out
+	   ./jacobi-1d-rmt  rmt.out
