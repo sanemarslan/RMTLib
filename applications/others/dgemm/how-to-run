@@ -1,0 +1,36 @@
+Compile: 
+	1. For original code:
+	   $ make
+	2. For RMT-enabled code:
+	   $ make RMT_OPTION=rmt
+
+
+Run: ./dgemm matrixSize repeatCount
+Ex:  ./dgemm 1024 1
+
+*******************************************
+For multithreaded execution:
+
+	export OMP_NUM_THREADS=8
+	printenv OMP_NUM_THREADS
+
+Then,
+	./dgemm 1024 1
+
+*******************************************
+
+We run the following cases:
+
+	./dgemm-orig 4096 1
+	./dgemm-orig 4096 2
+	./dgemm-orig 4096 4
+	./dgemm-orig 4096 8
+	./dgemm-orig 4096 16
+	./dgemm-orig 4096 32
+
+	./dgemm-rmt 4096 1
+	./dgemm-rmt 4096 2
+	./dgemm-rmt 4096 4
+	./dgemm-rmt 4096 8
+	./dgemm-rmt 4096 16
+	./dgemm-rmt 4096 32

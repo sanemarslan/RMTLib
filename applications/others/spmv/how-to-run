@@ -1,0 +1,41 @@
+Compile: 
+	1. For original code:
+	   $ make
+	2. For RMT-enabled code:
+	   $ make RMT_OPTION=rmt
+
+
+Run: ./csr_spmv inputMatrix repeatCount
+Ex:  ./csr_spmv inputs/bone010/bone010.mtx 1
+
+*******************************************
+
+Input matrix files can be downloaded from
+SuiteSparse matrix collection
+
+*******************************************
+
+For multithreaded execution:
+
+	export OMP_NUM_THREADS=8
+	printenv OMP_NUM_THREADS
+
+Then,
+	./csr_spmv inputs/bone010/bone010.mtx 1
+
+*******************************************
+
+We run the following cases:
+
+	./csr_spmv_orig inputs/bone010/bone010.mtx 1 
+	./csr_spmv_orig inputs/bone010/bone010.mtx 4
+	./csr_spmv_orig inputs/bone010/bone010.mtx 16 
+	./csr_spmv_orig inputs/bone010/bone010.mtx 32 
+
+	./csr_spmv_rmt inputs/bone010/bone010.mtx 1
+	./csr_spmv_rmt inputs/bone010/bone010.mtx 4
+	./csr_spmv_rmt inputs/bone010/bone010.mtx 16
+	./csr_spmv_rmt inputs/bone010/bone010.mtx 32
+
+Same tests are repeated for different inputs.
+

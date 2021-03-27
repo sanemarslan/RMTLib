@@ -1,0 +1,28 @@
+Compile: 
+	1. For original code:
+	   $ make
+	2. For RMT-enabled code:
+	   $ make RMT_OPTION=rmt
+
+How to run: 
+	./CG -o outFileName inputMatrix inputVector
+
+Example:  
+	./CG -o out.txt inputs/Matrix-Example-10x10.mtx inputs/Vector-B-10.mtx 
+
+
+We run the following cases:
+
+	./CG_orig -o orig.txt inputs/Matrix-Example-1000x1000.mtx inputs/Vector-B-1000.mtx 
+	./CG_orig -o orig.txt inputs/Matrix-Example-2000x2000.mtx inputs/Vector-B-2000.mtx 
+	./CG_orig -o orig.txt inputs/Matrix-Example-3000x3000.mtx inputs/Vector-B-3000.mtx 
+	./CG_orig -o orig.txt inputs/Matrix-Example-4000x4000.mtx inputs/Vector-B-4000.mtx 
+	./CG_orig -o orig.txt inputs/Matrix-Example-5000x5000.mtx inputs/Vector-B-5000.mtx 
+
+
+
+	./CG_rmt -o rmt.txt inputs/Matrix-Example-1000x1000.mtx inputs/Vector-B-1000.mtx 
+	./CG_rmt -o rmt.txt inputs/Matrix-Example-2000x2000.mtx inputs/Vector-B-2000.mtx 
+	./CG_rmt -o rmt.txt inputs/Matrix-Example-3000x3000.mtx inputs/Vector-B-3000.mtx 
+	./CG_rmt -o rmt.txt inputs/Matrix-Example-4000x4000.mtx inputs/Vector-B-4000.mtx 
+	./CG_rmt -o rmt.txt inputs/Matrix-Example-5000x5000.mtx inputs/Vector-B-5000.mtx 

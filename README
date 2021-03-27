@@ -1,0 +1,52 @@
+
+=================================================================================
+=================================================================================
+
+RMTLib/README
+
+=================================================================================
+=================================================================================
+
+----------------------------------------
+What is RMTLib
+----------------------------------------
+
+RMTLib is an application level partial redundant multithreading library to
+enhance fault tolerance of C programs. The library will execute more critical 
+functions (i.e, annotated by the programmer) of an application in redundant 
+mode. The user should include our library first, then annotates the function, 
+that will be executed redundantly, including its arguments, and the annotated 
+function will be executed by three threads. All the parameters of the function
+are replicated before redundant execution; similarly the output of each function 
+is compared before the execution of the rest of the application. Triple Modular 
+Redundancy (TMR) is used to correct the output of redundant threads. The corrected 
+output is determined based on a majority voting for the results of three threads.
+
+
+
+More information can be found in our paper:
+  XXX
+
+
+=================================================================================
+=================================================================================
+
+----------------------------------------
+How to use RMTLib?
+----------------------------------------
+
+Our RMT library is located under include/ folder. The user should invoke activateRMT
+function by indicating which function should be executed in redundant mode with its 
+parameters. Example usage can be found under applications/ folder. We used 30 
+applications of Polybench suite (applications/polybench) and 4 more HPC applications 
+(i.e., DGEMM, SpMV, CG, and SS-CG) under applications/others folder.
+
+There is a separate Makefile to compile each program and a how-to-run file for 
+running the target program.
+
+
+=================================================================================
+
+
+
+
