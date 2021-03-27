@@ -1,0 +1,25 @@
+Compile: 
+	1. For original code:
+	   $ make
+	2. For RMT-enabled code:
+	   $ make RMT_OPTION=rmt
+
+How to run: 
+	Most of the programs are running with only kernel name.
+
+Example: 
+	1. For running the original code:
+	   ./correlation-orig > orig.out
+
+	2. For running the RMT-enabled code:
+	   ./correlation-rmt > rmt.out
+
+Optionally, some applications require an output file (i.e., ludcmp, floyd-warshall, and jacobi-1d)
+These can be runned with the following commands: 
+	
+Example: 
+	1. For running the original code:
+	   ./jacobi-1d-orig orig.out
+
+	2. For running the RMT-enabled code:
+	   ./jacobi-1d-rmt > rmt.out
