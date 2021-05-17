@@ -25,7 +25,10 @@ output is determined based on a majority voting for the results of three threads
 
 
 More information can be found in our paper:
-  XXX
+
+Arslan , S., Unsal, O. "Efficient selective replication of critical code regions for 
+SDC mitigation leveraging redundant multithreading". J Supercomput (2021). 
+https://doi.org/10.1007/s11227-021-03804-6
 
 
 =================================================================================
